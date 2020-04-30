@@ -11,10 +11,14 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const addItem = item => {
+	const addItem = (item) => {
 		// add the given item to the cart
+		setCart([
+			...cart, item
+		])
 	};
 
+	
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
